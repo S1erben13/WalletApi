@@ -43,7 +43,7 @@ class TestAPI(APITestCase):
     def test_create_wallet(self):
         # Creating new record by post request
         data = {'currency': 'USD', 'balance': '7777'}
-        response = self.client.post('/api/v1/wallets', data)
+        response = self.client.post('/api/v1/wallets/', data)
         # Object is created
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertEqual(Wallet.objects.last().currency, 'USD')
