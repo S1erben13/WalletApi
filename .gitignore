@@ -1,0 +1,3 @@
+postgresql/*
+.idea/*
+__pycache__/
